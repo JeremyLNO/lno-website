@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LNO</title>
+  <meta name="description" content="LNO deploys internal capital across digital asset markets through research, structured execution, and rigorous risk discipline.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Progress bar -->
+  <div id="progress-bar"></div>
+
+  <!-- ===== NAV ===== -->
+  <nav class="nav" id="nav">
+    <div class="nav__inner">
+      <a href="index.html" class="nav__logo">
+        <svg class="nav__logo-icon" viewBox="0 0 40 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="0"  y="18" width="6" height="12" fill="#C49D45"/>
+          <rect x="9"  y="11" width="6" height="19" fill="#0B1E3C"/>
+          <rect x="18" y="3"  width="6" height="27" fill="#0B1E3C"/>
+          <rect x="27" y="8"  width="6" height="22" fill="#0B1E3C"/>
+          <line x1="3" y1="24" x2="36" y2="6" stroke="#8A9BA8" stroke-width="1.5" stroke-linecap="round"/>
+          <circle cx="3"  cy="24" r="2.2" fill="#8A9BA8"/>
+          <circle cx="36" cy="6"  r="2.2" fill="#C49D45"/>
+        </svg>
+        <span class="nav__logo-text">LNO</span>
+      </a>
+
+      <ul class="nav__links" id="navLinks">
+        <li><a href="index.html"    class="nav__link nav__link--active">Home</a></li>
+        <li><a href="firm.html"     class="nav__link">The Firm</a></li>
+        <li><a href="thesis.html"   class="nav__link">Thesis</a></li>
+        <li><a href="approach.html" class="nav__link">Approach</a></li>
+        <li><a href="contact.html"  class="nav__link">Contact</a></li>
+      </ul>
+
+      <button class="nav__hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero" id="home">
+    <!-- Decorative bar chart (bottom right) -->
+    <div class="hero__chart" aria-hidden="true">
+      <svg width="160" height="200" viewBox="0 0 160 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect x="0"   y="140" width="14" height="60"  fill="#0B1E3C"/>
+        <rect x="20"  y="110" width="14" height="90"  fill="#0B1E3C"/>
+        <rect x="40"  y="75"  width="14" height="125" fill="#0B1E3C"/>
+        <rect x="60"  y="90"  width="14" height="110" fill="#0B1E3C"/>
+        <rect x="80"  y="50"  width="14" height="150" fill="#0B1E3C"/>
+        <rect x="100" y="65"  width="14" height="135" fill="#0B1E3C"/>
+        <rect x="120" y="30"  width="14" height="170" fill="#0B1E3C"/>
+        <rect x="140" y="45"  width="14" height="155" fill="#0B1E3C"/>
+      </svg>
+    </div>
+
+    <!-- Scroll indicator -->
+    <div class="hero__scroll" aria-hidden="true">
+      <span class="hero__scroll-text">Scroll</span>
+      <span class="hero__scroll-arrow">↓</span>
+    </div>
+
+    <div class="container hero__content fade-in">
+      <h1 class="hero__headline">
+        <span class="hero__line hero__line--dark">Proprietary<br>intelligence.</span>
+        <span class="hero__line hero__line--muted">Disciplined capital.</span>
+      </h1>
+      <p class="hero__sub">
+        LNO deploys internal capital across digital asset markets through
+        research, structured execution, and rigorous risk discipline.
+      </p>
+    </div>
+  </section>
+
+  <!-- ===== TICKER ===== -->
+  <div class="ticker" aria-hidden="true">
+    <div class="ticker__track">
+      <span class="ticker__item">STRUCTURE FIRST</span><span class="ticker__sep">◆</span>
+      <span class="ticker__item">PRECISION OVER ACTIVITY</span><span class="ticker__sep">◆</span>
+      <span class="ticker__item">REPEATABILITY OVER NOISE</span><span class="ticker__sep">◆</span>
+      <span class="ticker__item">CAPITAL PRESERVATION</span><span class="ticker__sep">◆</span>
+      <span class="ticker__item">SELECTIVE DISCLOSURE</span><span class="ticker__sep">◆</span>
+      <span class="ticker__item">LONG-TERM COMPOUNDING</span><span class="ticker__sep">◆</span>
+      <span class="ticker__item">RESEARCH-LED CONVICTION</span><span class="ticker__sep">◆</span>
+      <span class="ticker__item">OPERATIONAL RESILIENCE</span><span class="ticker__sep">◆</span>
+      <!-- duplicate for seamless loop -->
+      <span class="ticker__item">STRUCTURE FIRST</span><span class="ticker__sep">◆</span>
+      <span class="ticker__item">PRECISION OVER ACTIVITY</span><span class="ticker__sep">◆</span>
+      <span class="ticker__item">REPEATABILITY OVER NOISE</span><span class="ticker__sep">◆</span>
+      <span class="ticker__item">CAPITAL PRESERVATION</span><span class="ticker__sep">◆</span>
+      <span class="ticker__item">SELECTIVE DISCLOSURE</span><span class="ticker__sep">◆</span>
+      <span class="ticker__item">LONG-TERM COMPOUNDING</span><span class="ticker__sep">◆</span>
+      <span class="ticker__item">RESEARCH-LED CONVICTION</span><span class="ticker__sep">◆</span>
+      <span class="ticker__item">OPERATIONAL RESILIENCE</span><span class="ticker__sep">◆</span>
+    </div>
+  </div>
+
+  <!-- ===== FIRM AT A GLANCE ===== -->
+  <section class="stats">
+    <div class="container">
+      <p class="label">Firm at a Glance</p>
+      <div class="stats__grid">
+        <div class="stats__item fade-in" style="--delay:0s">
+          <div class="stats__val">100%</div>
+          <div class="stats__key">Internal Capital</div>
+        </div>
+        <div class="stats__item fade-in" style="--delay:0.1s">
+          <div class="stats__val">Focused</div>
+          <div class="stats__key">Disciplined</div>
+        </div>
+        <div class="stats__item fade-in" style="--delay:0.2s">
+          <div class="stats__val">24/7</div>
+          <div class="stats__key">Markets Covered</div>
+        </div>
+        <div class="stats__item fade-in" style="--delay:0.3s">
+          <div class="stats__val">∞</div>
+          <div class="stats__key">Time Horizon</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PILLARS ===== -->
+  <section class="pillars">
+    <div class="container">
+      <div class="pillars__grid">
+
+        <div class="pillar fade-in" style="--delay:0s">
+          <span class="pillar__num">01</span>
+          <h3 class="pillar__title">Internal Capital</h3>
+          <p class="pillar__body">We operate exclusively with our own balance sheet. We do not manage third-party funds, accept external investors, or design products for public consumption. Our structural independence guarantees strategic alignment.</p>
+        </div>
+
+        <div class="pillar fade-in" style="--delay:0.1s">
+          <span class="pillar__num">02</span>
+          <h3 class="pillar__title">Research-Led</h3>
+          <p class="pillar__body">Conviction stems from profound structural understanding. We invest heavily in systems, data, and analytical frameworks to decode market mechanics before deploying capital.</p>
+        </div>
+
+        <div class="pillar fade-in" style="--delay:0.15s">
+          <span class="pillar__num">03</span>
+          <h3 class="pillar__title">Execution Discipline</h3>
+          <p class="pillar__body">Strategy without precision is intellectual exercise. Our edge is realized through meticulous trade structuring, latency optimization, and unemotional risk management.</p>
+        </div>
+
+        <div class="pillar fade-in" style="--delay:0.2s">
+          <span class="pillar__num">04</span>
+          <h3 class="pillar__title">Confidentiality</h3>
+          <p class="pillar__body">We consider information control a strategic imperative. We do not publish our strategies, market our successes, or participate in the broader industry noise cycle.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== OUR THESIS + OUR APPROACH ===== -->
+  <section class="split">
+    <div class="container">
+      <div class="split__grid">
+
+        <div class="split__col fade-in" style="--delay:0s">
+          <h2 class="split__heading">Our Thesis.</h2>
+          <p class="split__body">Crypto remains one of the few global asset classes where fragmentation, reflexivity, and structural inefficiencies coexist at meaningful scale. Edge does not come from constant activity, but from structural understanding and selective exposure.</p>
+          <a href="thesis.html" class="arrow-link">READ THESIS <span class="arr">→</span></a>
+        </div>
+
+        <div class="split__col fade-in" style="--delay:0.12s">
+          <div class="split__orb" aria-hidden="true"></div>
+          <h2 class="split__heading">Our Approach.</h2>
+          <p class="split__body">We approach markets as a system — not as a sequence of isolated opportunities. Structure first. Precision over activity. Repeatability over noise. Our operating model rests on defined, bounded strategic frameworks.</p>
+          <a href="approach.html" class="arrow-link">VIEW OPERATING MODEL <span class="arr">→</span></a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CTA DARK ===== -->
+  <section class="cta">
+    <div class="container cta__inner">
+      <div class="fade-in">
+        <h2 class="cta__heading">Selective disclosure is not a limitation&thinsp;—&thinsp;it is a deliberate operating principle.</h2>
+        <p class="cta__body">LNO does not seek broad engagement. Inquiries from qualified institutional contacts, strategic partners, and senior professionals are considered selectively.</p>
+        <a href="contact.html" class="cta__btn">Inquiries</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container footer__main">
+      <div class="footer__brand">
+        <a href="index.html" class="footer__logo">
+          <svg class="footer__logo-icon" viewBox="0 0 40 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="0"  y="18" width="6" height="12" fill="#C49D45"/>
+            <rect x="9"  y="11" width="6" height="19" fill="white"/>
+            <rect x="18" y="3"  width="6" height="27" fill="white"/>
+            <rect x="27" y="8"  width="6" height="22" fill="white"/>
+            <line x1="3" y1="24" x2="36" y2="6" stroke="rgba(255,255,255,0.35)" stroke-width="1.5" stroke-linecap="round"/>
+            <circle cx="3"  cy="24" r="2.2" fill="rgba(255,255,255,0.35)"/>
+            <circle cx="36" cy="6"  r="2.2" fill="#C49D45"/>
+          </svg>
+          <span class="footer__logo-text">LNO</span>
+        </a>
+        <p class="footer__tagline">Proprietary intelligence. Disciplined capital.</p>
+      </div>
+
+      <nav class="footer__nav" aria-label="Footer navigation">
+        <div class="footer__col">
+          <p class="footer__col-label">The Firm</p>
+          <ul>
+            <li><a href="firm.html"     class="footer__link">About</a></li>
+            <li><a href="thesis.html"   class="footer__link">Thesis</a></li>
+            <li><a href="approach.html" class="footer__link">Approach</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <p class="footer__col-label">Connect</p>
+          <ul>
+            <li><a href="contact.html" class="footer__link">Inquiries</a></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+
+    <div class="footer__bottom">
+      <div class="container footer__bottom-inner">
+        <p class="footer__copy">© 2026 LNO. All rights reserved.</p>
+        <div class="footer__legal">
+          <a href="#" class="footer__legal-link">Legal &amp; Disclaimers</a>
+          <a href="#" class="footer__legal-link">Cookie Policy</a>
+          <a href="#" class="footer__legal-link">Manage cookies</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
