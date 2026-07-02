@@ -7,154 +7,111 @@
   <meta name="description" content="Crypto remains one of the few global asset classes where fragmentation, reflexivity, and structural inefficiencies coexist at meaningful scale.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=IBM+Plex+Mono:wght@400;500&family=Archivo:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <div id="progress-bar"></div>
-
-  <!-- ===== NAV ===== -->
   <nav class="nav" id="nav">
-    <div class="nav__inner">
-      <a href="index.html" class="nav__logo">
-        <svg class="nav__logo-icon" viewBox="0 0 40 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <rect x="0"  y="18" width="6" height="12" fill="#C49D45"/>
-          <rect x="9"  y="11" width="6" height="19" fill="#0B1E3C"/>
-          <rect x="18" y="3"  width="6" height="27" fill="#0B1E3C"/>
-          <rect x="27" y="8"  width="6" height="22" fill="#0B1E3C"/>
-          <line x1="3" y1="24" x2="36" y2="6" stroke="#8A9BA8" stroke-width="1.5" stroke-linecap="round"/>
-          <circle cx="3"  cy="24" r="2.2" fill="#8A9BA8"/>
-          <circle cx="36" cy="6"  r="2.2" fill="#C49D45"/>
-        </svg>
-        <span class="nav__logo-text">LNO</span>
-      </a>
-
-      <ul class="nav__links" id="navLinks">
-        <li><a href="index.html"    class="nav__link">Home</a></li>
-        <li><a href="firm.html"     class="nav__link">The Firm</a></li>
-        <li><a href="thesis.html"   class="nav__link nav__link--active">Thesis</a></li>
-        <li><a href="approach.html" class="nav__link">Approach</a></li>
-        <li><a href="contact.html"  class="nav__link">Contact</a></li>
+    <a href="index.html" class="nav__logo"><img src="assets/lno-logo.png" alt="LNO"></a>
+    <div class="nav__right" id="navRight">
+      <ul class="nav__links">
+        <li><a href="index.html"    class="nav__link" data-i18n="nav.home">HOME</a></li>
+        <li><a href="firm.html"     class="nav__link" data-i18n="nav.firm">THE FIRM</a></li>
+        <li><a href="thesis.html"   class="nav__link nav__link--active" data-i18n="nav.thesis">THESIS</a></li>
+        <li><a href="approach.html" class="nav__link" data-i18n="nav.approach">APPROACH</a></li>
+        <li><a href="contact.html"  class="nav__link" data-i18n="nav.contact">CONTACT</a></li>
       </ul>
-
-      <button class="nav__hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
-        <span></span><span></span><span></span>
-      </button>
+      <div class="nav__lang">
+        <button class="nav__lang-btn" data-lang-btn="en">EN</button>
+        <button class="nav__lang-btn" data-lang-btn="fr">FR</button>
+        <button class="nav__lang-btn" data-lang-btn="es">ES</button>
+        <button class="nav__lang-btn" data-lang-btn="de">DE</button>
+      </div>
     </div>
+    <button class="nav__hamburger" id="hamburger" aria-label="Menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
   </nav>
 
-  <!-- ===== PAGE HERO ===== -->
+  <!-- PAGE HERO -->
   <section class="page-hero">
-    <div class="page-hero__chart" aria-hidden="true">
-      <svg width="120" height="160" viewBox="0 0 120 160" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <rect x="0"  y="100" width="10" height="60"  fill="#0B1E3C"/>
-        <rect x="16" y="75"  width="10" height="85"  fill="#0B1E3C"/>
-        <rect x="32" y="50"  width="10" height="110" fill="#0B1E3C"/>
-        <rect x="48" y="65"  width="10" height="95"  fill="#0B1E3C"/>
-        <rect x="64" y="30"  width="10" height="130" fill="#0B1E3C"/>
-        <rect x="80" y="40"  width="10" height="120" fill="#0B1E3C"/>
-        <rect x="96" y="15"  width="10" height="145" fill="#0B1E3C"/>
+    <div class="page-hero__bg" aria-hidden="true">
+      <svg width="100%" height="100%" viewBox="0 0 1240 620" preserveAspectRatio="xMaxYMid slice" style="display:block;animation:lnoDrift 22s ease-in-out infinite">
+        <polyline points="620,540 760,500 900,520 1040,430 1180,460 1320,340" fill="none" stroke="#141F36" stroke-opacity=".12" stroke-width="2" stroke-dasharray="1400" stroke-dashoffset="1400" style="animation:lnoDraw 14s linear infinite"/>
+        <polyline points="620,470 780,430 920,460 1060,340 1200,380 1340,240" fill="none" stroke="#141F36" stroke-opacity=".08" stroke-width="2" stroke-dasharray="1400" stroke-dashoffset="1400" style="animation:lnoDraw 14s linear infinite;animation-delay:-5s"/>
+        <polyline points="620,400 800,360 940,390 1080,260 1220,310 1360,150" fill="none" stroke="#141F36" stroke-opacity=".05" stroke-width="2" stroke-dasharray="1400" stroke-dashoffset="1400" style="animation:lnoDraw 14s linear infinite;animation-delay:-9s"/>
+        <circle cx="1180" cy="460" r="5" fill="#C9A24C" style="animation:lnoPulse 6s ease-in-out infinite"/>
+        <circle cx="1060" cy="340" r="4" fill="#C9A24C" style="animation:lnoPulse 6s ease-in-out infinite;animation-delay:-3s"/>
       </svg>
     </div>
-    <div class="container page-hero__content fade-in">
-      <h1 class="page-hero__title">Market structure as<br>strategic foundation.</h1>
-      <p class="page-hero__sub">We approach markets as a system — not as a sequence of opportunities. Structure first. Precision over activity. Repeatability over noise.</p>
+    <div class="page-hero__content fade-in">
+      <h1 class="page-hero__h1" data-i18n="thesis.title">Market structure as strategic foundation.</h1>
+      <p class="page-hero__lead" data-i18n="thesis.lead">We approach markets as a system — not as a sequence of opportunities. Structure first. Precision over activity. Repeatability over noise.</p>
     </div>
   </section>
 
-  <!-- ===== THE LANDSCAPE ===== -->
+  <!-- THE LANDSCAPE -->
   <section class="text-section">
-    <div class="container">
-      <div class="text-section__inner fade-in">
-        <p class="text-section__label">The Landscape</p>
-        <p class="text-section__body">Crypto remains one of the few global asset classes where fragmentation, reflexivity, and structural inefficiencies coexist at meaningful scale. These inefficiencies persist not despite market growth, but often alongside it, created by the disparate nature of exchanges, varied regulatory regimes, and the unique retail-to-institutional participant mix.</p>
-      </div>
-    </div>
+    <p class="text-section__label" data-i18n="thesis.landscapeLabel">THE LANDSCAPE</p>
+    <p class="text-section__body fade-in" data-i18n="thesis.landscapeBody">Crypto remains one of the few global asset classes where fragmentation, reflexivity, and structural inefficiencies coexist at meaningful scale. These inefficiencies persist not despite market growth, but often alongside it, created by the disparate nature of exchanges, varied regulatory regimes, and the unique retail-to-institutional participant mix.</p>
   </section>
 
-  <!-- ===== PERSISTENT INEFFICIENCIES ===== -->
+  <!-- PERSISTENT INEFFICIENCIES -->
   <section class="cards">
-    <div class="container">
-      <p class="cards__label">Persistent Inefficiencies</p>
-      <div class="cards__grid">
-
-        <div class="card fade-in" style="--delay:0s">
-          <h3 class="card__title">Fragmented Liquidity</h3>
-          <p class="card__body">Capital is distributed across dozens of venues with varying risk profiles, creating constant pricing dislocations and funding rate imbalances.</p>
-        </div>
-
-        <div class="card fade-in" style="--delay:0.1s">
-          <h3 class="card__title">Uneven Information Processing</h3>
-          <p class="card__body">The speed and accuracy with which different market participants digest on-chain and off-chain data varies dramatically, creating structural lag.</p>
-        </div>
-
-        <div class="card fade-in" style="--delay:0.2s">
-          <h3 class="card__title">Behavioral Dislocations</h3>
-          <p class="card__body">Extreme leverage combined with emotional retail positioning regularly causes forced liquidations and predictable market overreactions.</p>
-        </div>
-
+    <p class="cards__kicker" data-i18n="thesis.inefficienciesLabel">PERSISTENT INEFFICIENCIES</p>
+    <div class="cards__grid">
+      <div class="card fade-in" style="--delay:.0s">
+        <h3 class="card__title" data-i18n="thesis.inefficiencies.0.title">Fragmented Liquidity</h3>
+        <p class="card__body" data-i18n="thesis.inefficiencies.0.body">Capital is distributed across dozens of venues with varying risk profiles, creating constant pricing dislocations and funding rate imbalances.</p>
+      </div>
+      <div class="card fade-in" style="--delay:.08s">
+        <h3 class="card__title" data-i18n="thesis.inefficiencies.1.title">Uneven Information Processing</h3>
+        <p class="card__body" data-i18n="thesis.inefficiencies.1.body">The speed and accuracy with which different market participants digest on-chain and off-chain data varies dramatically, creating structural lag.</p>
+      </div>
+      <div class="card fade-in" style="--delay:.16s">
+        <h3 class="card__title" data-i18n="thesis.inefficiencies.2.title">Behavioral Dislocations</h3>
+        <p class="card__body" data-i18n="thesis.inefficiencies.2.body">Extreme leverage combined with emotional retail positioning regularly causes forced liquidations and predictable market overreactions.</p>
       </div>
     </div>
   </section>
 
-  <!-- ===== WHERE EDGE ORIGINATES ===== -->
-  <section class="text-section">
-    <div class="container">
-      <div class="text-section__inner fade-in">
-        <p class="text-section__label">Where Edge Originates</p>
-        <p class="text-section__body">Edge does not come from noise, constant activity, or predicting the macroeconomic future. It comes from deep market understanding, execution quality, risk discipline, and selective exposure. We believe that alpha decays, but rigorous infrastructure and process compound.</p>
-      </div>
-      <div class="text-section__inner fade-in" style="--delay:0.1s; margin-top: 40px;">
-        <p class="text-section__body">Conversely, we observe that most capital is destroyed by weak process, poor calibration, emotional positioning, and structurally undisciplined behavior. Our mandate is the absolute avoidance of these failure modes.</p>
-      </div>
+  <!-- WHERE EDGE ORIGINATES -->
+  <section class="edge-band">
+    <p class="edge-band__kicker" data-i18n="thesis.edgeLabel">WHERE EDGE ORIGINATES</p>
+    <div class="edge-band__grid">
+      <p class="edge-band__p1 fade-in" data-i18n="thesis.edgeBody1">Edge does not come from noise, constant activity, or predicting the macroeconomic future. It comes from deep market understanding, execution quality, risk discipline, and selective exposure. We believe that alpha decays, but rigorous infrastructure and process compound.</p>
+      <p class="edge-band__p2 fade-in" style="--delay:.1s" data-i18n="thesis.edgeBody2">Conversely, we observe that most capital is destroyed by weak process, poor calibration, emotional positioning, and structurally undisciplined behavior. Our mandate is the absolute avoidance of these failure modes.</p>
     </div>
   </section>
 
-  <!-- ===== FOOTER ===== -->
+  <!-- FOOTER -->
   <footer class="footer">
-    <div class="container footer__main">
+    <div class="footer__main">
       <div class="footer__brand">
-        <a href="index.html" class="footer__logo">
-          <svg class="footer__logo-icon" viewBox="0 0 40 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <rect x="0"  y="18" width="6" height="12" fill="#C49D45"/>
-            <rect x="9"  y="11" width="6" height="19" fill="white"/>
-            <rect x="18" y="3"  width="6" height="27" fill="white"/>
-            <rect x="27" y="8"  width="6" height="22" fill="white"/>
-            <line x1="3" y1="24" x2="36" y2="6" stroke="rgba(255,255,255,0.35)" stroke-width="1.5" stroke-linecap="round"/>
-            <circle cx="3"  cy="24" r="2.2" fill="rgba(255,255,255,0.35)"/>
-            <circle cx="36" cy="6"  r="2.2" fill="#C49D45"/>
-          </svg>
-          <span class="footer__logo-text">LNO</span>
-        </a>
-        <p class="footer__tagline">Proprietary intelligence. Disciplined capital.</p>
+        <a href="index.html" class="footer__brand-logo"><img src="assets/lno-logo.png" alt="LNO"></a>
+        <p class="footer__tagline" data-i18n="footer.tagline">Proprietary intelligence. Disciplined capital.</p>
       </div>
       <nav class="footer__nav" aria-label="Footer navigation">
         <div class="footer__col">
-          <p class="footer__col-label">The Firm</p>
-          <ul>
-            <li><a href="firm.html"     class="footer__link">About</a></li>
-            <li><a href="thesis.html"   class="footer__link">Thesis</a></li>
-            <li><a href="approach.html" class="footer__link">Approach</a></li>
-          </ul>
+          <p class="footer__col-label" data-i18n="footer.firmLabel">THE FIRM</p>
+          <a href="firm.html"     class="footer__link" data-i18n="footer.about">About</a>
+          <a href="thesis.html"   class="footer__link" data-i18n="footer.thesisLink">Thesis</a>
+          <a href="approach.html" class="footer__link" data-i18n="footer.approachLink">Approach</a>
         </div>
         <div class="footer__col">
-          <p class="footer__col-label">Connect</p>
-          <ul>
-            <li><a href="contact.html" class="footer__link">Inquiries</a></li>
-            <li><a href="https://www.linkedin.com/company/wearelno/" class="footer__link" target="_blank" rel="noopener">LinkedIn</a></li>
-          </ul>
+          <p class="footer__col-label" data-i18n="footer.connectLabel">CONNECT</p>
+          <a href="contact.html" class="footer__link" data-i18n="footer.inquiries">Inquiries</a>
+          <a href="https://www.linkedin.com/company/wearelno/" class="footer__link" target="_blank" rel="noopener" data-i18n="footer.linkedin">LinkedIn</a>
         </div>
       </nav>
     </div>
     <div class="footer__bottom">
-      <div class="container footer__bottom-inner">
-        <p class="footer__copy">© 2026 LNO. All rights reserved.</p>
-        <div class="footer__legal">
-          <a href="#" class="footer__legal-link">Legal &amp; Disclaimers</a>
-          <a href="#" class="footer__legal-link">Cookie Policy</a>
-          <a href="#" class="footer__legal-link">Manage cookies</a>
-        </div>
+      <span data-i18n="footer.copyright">© 2026 LNO. All rights reserved.</span>
+      <div class="footer__legal">
+        <a href="#" data-i18n="footer.legal">Legal &amp; Disclaimers</a>
+        <a href="#" data-i18n="footer.cookie">Cookie Policy</a>
+        <a href="#" data-i18n="footer.manage">Manage cookies</a>
       </div>
     </div>
   </footer>
