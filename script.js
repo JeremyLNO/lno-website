@@ -65,7 +65,7 @@ en: {
     directLabel:'DIRECT CORRESPONDENCE', email:'contact@lno.company',
     emailNote:'Write to us directly. Please include your name, affiliation, and a concise description of your inquiry. We respond selectively and at our discretion.'
   },
-  footer:{ tagline:'Proprietary intelligence. Disciplined capital.', firmLabel:'THE FIRM', about:'About', thesisLink:'Thesis', approachLink:'Approach', connectLabel:'CONNECT', inquiries:'Inquiries', linkedin:'LinkedIn', copyright:'© 2026 LNO. All rights reserved.', legal:'Legal & Disclaimers', cookie:'Cookie Policy', manage:'Manage cookies' }
+  footer:{ tagline:'Proprietary intelligence. Disciplined capital.', firmLabel:'THE FIRM', about:'About', thesisLink:'Thesis', approachLink:'Approach', connectLabel:'CONNECT', inquiries:'Inquiries', linkedin:'LinkedIn', copyright:'© 2026 LNO. All rights reserved.', legal:'Legal & Disclaimers', cookie:'Cookie Policy' }
 },
 
 fr: {
@@ -131,7 +131,7 @@ fr: {
     directLabel:'CORRESPONDANCE DIRECTE', email:'contact@lno.company',
     emailNote:'Écrivez-nous directement. Merci d’indiquer votre nom, votre affiliation et une description concise de votre demande. Nous répondons de façon sélective et à notre discrétion.'
   },
-  footer:{ tagline:'Intelligence propriétaire. Capital discipliné.', firmLabel:'LA FIRME', about:'À propos', thesisLink:'Thèse', approachLink:'Approche', connectLabel:'CONTACT', inquiries:'Demandes', linkedin:'LinkedIn', copyright:'© 2026 LNO. Tous droits réservés.', legal:'Mentions légales', cookie:'Politique de cookies', manage:'Gérer les cookies' }
+  footer:{ tagline:'Intelligence propriétaire. Capital discipliné.', firmLabel:'LA FIRME', about:'À propos', thesisLink:'Thèse', approachLink:'Approche', connectLabel:'CONTACT', inquiries:'Demandes', linkedin:'LinkedIn', copyright:'© 2026 LNO. Tous droits réservés.', legal:'Mentions légales', cookie:'Politique de cookies' }
 },
 
 es: {
@@ -197,7 +197,7 @@ es: {
     directLabel:'CORRESPONDENCIA DIRECTA', email:'contact@lno.company',
     emailNote:'Escríbanos directamente. Incluya su nombre, afiliación y una descripción concisa de su consulta. Respondemos de forma selectiva y a nuestra discreción.'
   },
-  footer:{ tagline:'Inteligencia propietaria. Capital disciplinado.', firmLabel:'LA FIRMA', about:'Acerca de', thesisLink:'Tesis', approachLink:'Enfoque', connectLabel:'CONTACTO', inquiries:'Consultas', linkedin:'LinkedIn', copyright:'© 2026 LNO. Todos los derechos reservados.', legal:'Aviso Legal', cookie:'Política de Cookies', manage:'Gestionar cookies' }
+  footer:{ tagline:'Inteligencia propietaria. Capital disciplinado.', firmLabel:'LA FIRMA', about:'Acerca de', thesisLink:'Tesis', approachLink:'Enfoque', connectLabel:'CONTACTO', inquiries:'Consultas', linkedin:'LinkedIn', copyright:'© 2026 LNO. Todos los derechos reservados.', legal:'Aviso Legal', cookie:'Política de Cookies' }
 },
 
 de: {
@@ -263,7 +263,7 @@ de: {
     directLabel:'DIREKTE KORRESPONDENZ', email:'contact@lno.company',
     emailNote:'Schreiben Sie uns direkt. Bitte geben Sie Ihren Namen, Ihre Zugehörigkeit und eine kurze Beschreibung Ihres Anliegens an. Wir antworten selektiv und nach eigenem Ermessen.'
   },
-  footer:{ tagline:'Proprietäre Intelligenz. Diszipliniertes Kapital.', firmLabel:'DIE FIRMA', about:'Über uns', thesisLink:'These', approachLink:'Ansatz', connectLabel:'KONTAKT', inquiries:'Anfragen', linkedin:'LinkedIn', copyright:'© 2026 LNO. Alle Rechte vorbehalten.', legal:'Rechtliches', cookie:'Cookie-Richtlinie', manage:'Cookies verwalten' }
+  footer:{ tagline:'Proprietäre Intelligenz. Diszipliniertes Kapital.', firmLabel:'DIE FIRMA', about:'Über uns', thesisLink:'These', approachLink:'Ansatz', connectLabel:'KONTAKT', inquiries:'Anfragen', linkedin:'LinkedIn', copyright:'© 2026 LNO. Alle Rechte vorbehalten.', legal:'Rechtliches', cookie:'Cookie-Richtlinie' }
 }
 };
 
