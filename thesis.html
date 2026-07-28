@@ -11,7 +11,7 @@
   <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
   <link rel="icon" type="image/png" sizes="96x96" href="assets/favicon-96x96.png">
   <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
-  <meta name="theme-color" content="#101E36">
+  <meta name="theme-color" content="#F7F5EF">
   <link rel="stylesheet" href="fonts.css">
   <link rel="stylesheet" href="style.css">
 </head>
@@ -41,46 +41,18 @@
 
   <!-- PAGE HERO -->
   <section class="page-hero">
+    <div class="page-hero__bg" aria-hidden="true">
+      <svg width="100%" height="100%" viewBox="0 0 1240 620" preserveAspectRatio="xMaxYMid slice" style="display:block;animation:lnoDrift 22s ease-in-out infinite">
+        <polyline points="620,540 760,500 900,520 1040,430 1180,460 1320,340" fill="none" stroke="#141F36" stroke-opacity=".12" stroke-width="2" stroke-dasharray="1400" stroke-dashoffset="1400" style="animation:lnoDraw 14s linear infinite"/>
+        <polyline points="620,470 780,430 920,460 1060,340 1200,380 1340,240" fill="none" stroke="#141F36" stroke-opacity=".08" stroke-width="2" stroke-dasharray="1400" stroke-dashoffset="1400" style="animation:lnoDraw 14s linear infinite;animation-delay:-5s"/>
+        <polyline points="620,400 800,360 940,390 1080,260 1220,310 1360,150" fill="none" stroke="#141F36" stroke-opacity=".05" stroke-width="2" stroke-dasharray="1400" stroke-dashoffset="1400" style="animation:lnoDraw 14s linear infinite;animation-delay:-9s"/>
+        <circle cx="1180" cy="460" r="5" fill="#C9A24C" style="animation:lnoPulse 6s ease-in-out infinite"/>
+        <circle cx="1060" cy="340" r="4" fill="#C9A24C" style="animation:lnoPulse 6s ease-in-out infinite;animation-delay:-3s"/>
+      </svg>
+    </div>
     <div class="page-hero__content fade-in">
       <h1 class="page-hero__h1" data-i18n="thesis.title">Market structure as strategic foundation.</h1>
       <p class="page-hero__lead" data-i18n="thesis.lead">We approach markets as a system — not as a sequence of opportunities. Structure first. Precision over activity. Repeatability over noise.</p>
-    </div>
-    <div class="page-hero__chart" aria-hidden="true">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 380">
-        <defs>
-          <radialGradient id="phHalo2" cx="55%" cy="42%" r="52%">
-            <stop offset="0%" stop-color="#C9A24D" stop-opacity="0.07"/>
-            <stop offset="100%" stop-color="#C9A24D" stop-opacity="0"/>
-          </radialGradient>
-          <filter id="phGlow2" x="-100%" y="-100%" width="300%" height="300%">
-            <feGaussianBlur stdDeviation="3" result="blur"/>
-            <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
-          </filter>
-        </defs>
-        <rect width="520" height="380" fill="url(#phHalo2)"/>
-        <g class="chart-grid">
-          <line x1="40" y1="80"  x2="490" y2="80"  stroke="#D9DCE2" stroke-opacity=".05" stroke-width="1"/>
-          <line x1="40" y1="170" x2="490" y2="170" stroke="#D9DCE2" stroke-opacity=".05" stroke-width="1"/>
-          <line x1="40" y1="260" x2="490" y2="260" stroke="#D9DCE2" stroke-opacity=".05" stroke-width="1"/>
-          <line x1="155" y1="40" x2="155" y2="330" stroke="#D9DCE2" stroke-opacity=".03" stroke-width="1"/>
-          <line x1="285" y1="40" x2="285" y2="330" stroke="#D9DCE2" stroke-opacity=".03" stroke-width="1"/>
-          <line x1="415" y1="40" x2="415" y2="330" stroke="#D9DCE2" stroke-opacity=".03" stroke-width="1"/>
-        </g>
-        <polyline class="chart-line chart-line--3"
-          points="50,318 115,292 190,268 265,282 340,248 415,218 490,230"
-          fill="none" stroke="#D9DCE2" stroke-width="1" stroke-opacity=".18"/>
-        <polyline class="chart-line chart-line--2"
-          points="50,295 115,265 190,238 265,252 340,215 415,182 490,195"
-          fill="none" stroke="#D9DCE2" stroke-width="1.5" stroke-opacity=".3"/>
-        <polyline class="chart-line chart-line--1"
-          points="50,272 115,240 190,210 265,225 340,185 415,150 490,162"
-          fill="none" stroke="#C9A24D" stroke-width="2"/>
-        <circle class="chart-ring chart-ring--1" cx="340" cy="185" r="12" fill="none" stroke="#C9A24D" stroke-width="1"/>
-        <circle class="chart-dot chart-dot--1" cx="340" cy="185" r="4.5" fill="#C9A24D" filter="url(#phGlow2)"/>
-        <text class="chart-label chart-label--1" x="352" y="181" font-family="IBM Plex Mono,monospace" font-size="8" letter-spacing="1" fill="rgba(244,241,234,.42)">EDGE</text>
-        <circle class="chart-ring chart-ring--2" cx="490" cy="162" r="12" fill="none" stroke="#C9A24D" stroke-width="1"/>
-        <circle class="chart-dot chart-dot--2" cx="490" cy="162" r="4.5" fill="#C9A24D" filter="url(#phGlow2)"/>
-      </svg>
     </div>
   </section>
 
