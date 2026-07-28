@@ -1,0 +1,47 @@
+name: Deploy to OVH
+
+# Publishes the site to the OVH web root on every push to main.
+# Can also be run by hand from the Actions tab.
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+# Never let two deploys write to the server at the same time.
+concurrency:
+  group: sftp-deploy
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out the site
+        uses: actions/checkout@v4
+
+      - name: Upload changed files over SFTP
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          # SFTP over SSH. This cluster answers AUTH TLS with
+          # "500 This security scheme is not implemented", so plain FTP
+          # would send the password in clear text — SFTP is the safe path.
+          protocol: sftp
+          port: 22
+          # OVH shared hosting serves from www/. Override with the
+          # FTP_SERVER_DIR repository variable if your account differs.
+          server-dir: ${{ vars.FTP_SERVER_DIR || 'www/' }}
+          local-dir: ./
+          # Only ever adds and updates. Files already on the server that
+          # are not in the repo are left alone, never deleted.
+          dangerous-clean-slate: false
+          exclude: |
+            **/.git*
+            **/.git*/**
+            **/.github/**
+            **/.claude/**
+            **/.DS_Store
+            **/node_modules/**
+            **/*.md
