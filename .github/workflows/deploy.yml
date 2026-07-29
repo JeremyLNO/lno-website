@@ -25,11 +25,16 @@ jobs:
           server: ${{ secrets.FTP_SERVER }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
-          # SFTP over SSH. This cluster answers AUTH TLS with
-          # "500 This security scheme is not implemented", so plain FTP
-          # would send the password in clear text — SFTP is the safe path.
-          protocol: sftp
-          port: 22
+          # FTP-Deploy-Action does NOT support SFTP — it only accepts
+          # "ftp", "ftps" or "ftps-legacy" (a protocol: sftp run fails
+          # immediately with "invalid parameter"). So this deploys over
+          # FTPS: explicit TLS on the standard control port 21.
+          # If the cluster answers AUTH TLS with "500 This security scheme
+          # is not implemented", try "ftps-legacy" (implicit TLS, port 990)
+          # rather than dropping to "ftp", which sends the password in
+          # clear text.
+          protocol: ftps
+          port: 21
           # OVH shared hosting serves from www/. Override with the
           # FTP_SERVER_DIR repository variable if your account differs.
           server-dir: ${{ vars.FTP_SERVER_DIR || 'www/' }}
