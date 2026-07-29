@@ -25,15 +25,19 @@ jobs:
           server: ${{ secrets.FTP_SERVER }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
-          # FTP-Deploy-Action does NOT support SFTP — it only accepts
-          # "ftp", "ftps" or "ftps-legacy" (a protocol: sftp run fails
-          # immediately with "invalid parameter"). So this deploys over
-          # FTPS: explicit TLS on the standard control port 21.
-          # If the cluster answers AUTH TLS with "500 This security scheme
-          # is not implemented", try "ftps-legacy" (implicit TLS, port 990)
-          # rather than dropping to "ftp", which sends the password in
-          # clear text.
-          protocol: ftps
+          # DELIBERATE, INSECURE: plain FTP on port 21.
+          #
+          # Two other options were tried and do not work here:
+          #   - protocol: sftp  → FTP-Deploy-Action does not support SFTP at
+          #     all; the run dies instantly on "invalid parameter".
+          #   - protocol: ftps  → this OVH cluster rejects explicit TLS with
+          #     "500 This security scheme is not implemented".
+          #
+          # So the credentials below cross the network UNENCRYPTED on every
+          # deploy. Treat FTP_PASSWORD as compromised and rotate it if it is
+          # reused anywhere else. The encrypted alternative is SFTP on port
+          # 22, which needs a different action (e.g. wlixcc/SFTP-Deploy-Action).
+          protocol: ftp
           port: 21
           # OVH shared hosting serves from www/. Override with the
           # FTP_SERVER_DIR repository variable if your account differs.
