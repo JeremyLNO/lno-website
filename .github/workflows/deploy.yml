@@ -19,38 +19,19 @@ jobs:
       - name: Check out the site
         uses: actions/checkout@v4
 
-      - name: Upload changed files over SFTP
-        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+      - name: Upload over SFTP
+        uses: wlixcc/SFTP-Deploy-Action@v1.2.4
         with:
           server: ${{ secrets.FTP_SERVER }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
-          # DELIBERATE, INSECURE: plain FTP on port 21.
-          #
-          # Two other options were tried and do not work here:
-          #   - protocol: sftp  → FTP-Deploy-Action does not support SFTP at
-          #     all; the run dies instantly on "invalid parameter".
-          #   - protocol: ftps  → this OVH cluster rejects explicit TLS with
-          #     "500 This security scheme is not implemented".
-          #
-          # So the credentials below cross the network UNENCRYPTED on every
-          # deploy. Treat FTP_PASSWORD as compromised and rotate it if it is
-          # reused anywhere else. The encrypted alternative is SFTP on port
-          # 22, which needs a different action (e.g. wlixcc/SFTP-Deploy-Action).
-          protocol: ftp
-          port: 21
-          # OVH shared hosting serves from www/. Override with the
-          # FTP_SERVER_DIR repository variable if your account differs.
-          server-dir: ${{ vars.FTP_SERVER_DIR || 'www/' }}
-          local-dir: ./
-          # Only ever adds and updates. Files already on the server that
-          # are not in the repo are left alone, never deleted.
-          dangerous-clean-slate: false
-          exclude: |
-            **/.git*
-            **/.git*/**
-            **/.github/**
-            **/.claude/**
-            **/.DS_Store
-            **/node_modules/**
-            **/*.md
+          # SFTP over SSH on port 22: the credentials and the files are
+          # encrypted in transit. This host answers SSH-2.0-OpenSSH_7.9p1.
+          # Plain FTP on 21 sent the password in clear text, and FTPS is
+          # refused here ("500 This security scheme is not implemented").
+          port: 22
+          sftp_only: true
+          # The './*' glob does not match dotfiles, so .git, .github and
+          # .claude are left behind. Verified after deploy: /.github/ 404s.
+          local_path: './*'
+          remote_path: ${{ vars.FTP_SERVER_DIR || 'www' }}
