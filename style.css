@@ -140,9 +140,14 @@ button { font-family: inherit; }
 
 /* ===== TRIAD (home + firm) ===== */
 .triad { padding: 0 var(--gutter) 80px; }
-.triad__row { display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 28px; border-top: 1px solid var(--gold); padding-top: 44px; }
-.triad__item { font: 300 42px/1.2 var(--font-serif); letter-spacing: .06em; color: var(--navy); }
-.triad__sep { font: 300 34px/1 var(--font-serif); color: var(--gold); }
+.triad__grid { display: grid; grid-template-columns: repeat(3, 1fr); border-top: 1px solid var(--gold); }
+.triad__cell { padding: 44px 44px 0; }
+.triad__cell + .triad__cell { border-left: 1px solid rgba(176,137,59,.35); }
+.triad__cell:first-child { padding-left: 0; }
+.triad__cell:last-child { padding-right: 0; }
+.triad__icon { width: 34px; height: 34px; color: var(--gold); margin-bottom: 24px; }
+.triad__item { font: 300 30px/1.2 var(--font-serif); letter-spacing: .06em; color: var(--navy); margin-bottom: 14px; }
+.triad__body { font: 300 15px/1.7 var(--font-sans); color: var(--text-70); }
 
 /* ===== NAVY BAND (home, thesis teaser) ===== */
 .band { background: var(--navy); color: var(--on-dark); padding: 80px var(--gutter); display: grid; grid-template-columns: 1fr 1fr; gap: 72px; }
@@ -225,8 +230,8 @@ button { font-family: inherit; }
 @media (max-width: 1024px) {
   :root { --gutter: 40px; }
   .hero__h1 { font-size: 56px; }
-  .triad__item { font-size: 32px; }
-  .triad__sep { font-size: 26px; }
+  .triad__cell { padding: 36px 28px 0; }
+  .triad__item { font-size: 25px; }
   .stats__grid { grid-template-columns: repeat(2, 1fr); }
 }
 @media (max-width: 768px) {
@@ -237,9 +242,10 @@ button { font-family: inherit; }
   .nav__lang { margin-left: 0; }
   .nav__hamburger { display: flex; }
   .hero__h1 { font-size: 42px; }
-  .triad__row { flex-direction: column; gap: 14px; }
-  .triad__item { font-size: 28px; }
-  .triad__sep { display: none; }
+  .triad__grid { grid-template-columns: 1fr; }
+  .triad__cell { padding: 32px 0 0; }
+  .triad__cell + .triad__cell { border-left: none; border-top: 1px solid rgba(176,137,59,.35); }
+  .triad__item { font-size: 26px; }
   .hero__sub { font-size: 17px; }
   .page-hero__h1 { font-size: 36px; }
   .page-hero__lead { font-size: 16px; }

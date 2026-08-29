@@ -4,7 +4,10 @@
 const CONTENT = {
 en: {
   nav: { home:'HOME', firm:'THE FIRM', thesis:'THESIS', contact:'CONTACT' },
-  triad:{ research:'RESEARCH', technology:'TECHNOLOGY', execution:'EXECUTION' },
+  triad:{ research:'RESEARCH', technology:'TECHNOLOGY', execution:'EXECUTION',
+           researchBody:'Systematic market intelligence, structural analysis, and data-driven signal generation. We do not guess; we measure, model, and backtest.',
+           technologyBody:'Reliable, redundant, latency-aware technical stack. We invest heavily in our proprietary technology to ensure operational resilience in volatile regimes.',
+           executionBody:'Precise entry and exit, minimizing friction, slippage, and behavioral error. Execution quality is treated as a core component of alpha.' },
   home: {
     kicker:'PROPRIETARY TRADING · DIGITAL ASSETS',
     title:'PROPRIETARY TRADING FIRM',
@@ -40,7 +43,10 @@ en: {
 
 fr: {
   nav:{ home:'ACCUEIL', firm:'LA FIRME', thesis:'THÈSE', contact:'CONTACT' },
-  triad:{ research:'RECHERCHE', technology:'TECHNOLOGIE', execution:'EXÉCUTION' },
+  triad:{ research:'RECHERCHE', technology:'TECHNOLOGIE', execution:'EXÉCUTION',
+           researchBody:'Intelligence de marché systématique, analyse structurelle et génération de signaux fondée sur les données. Nous ne devinons pas ; nous mesurons, modélisons et testons.',
+           technologyBody:'Pile technique fiable, redondante et sensible à la latence. Nous investissons massivement dans notre technologie propriétaire pour garantir une résilience opérationnelle en régime volatil.',
+           executionBody:'Entrées et sorties précises, minimisant la friction, le slippage et l’erreur comportementale. La qualité d’exécution est traitée comme une composante essentielle de l’alpha.' },
   home:{
     kicker:'TRADING PROPRIÉTAIRE · ACTIFS NUMÉRIQUES',
     title:'SOCIÉTÉ DE TRADING POUR COMPTE PROPRE',
@@ -76,7 +82,10 @@ fr: {
 
 es: {
   nav:{ home:'INICIO', firm:'LA FIRMA', thesis:'TESIS', contact:'CONTACTO' },
-  triad:{ research:'INVESTIGACIÓN', technology:'TECNOLOGÍA', execution:'EJECUCIÓN' },
+  triad:{ research:'INVESTIGACIÓN', technology:'TECNOLOGÍA', execution:'EJECUCIÓN',
+           researchBody:'Inteligencia de mercado sistemática, análisis estructural y generación de señales basada en datos. No adivinamos; medimos, modelamos y realizamos backtesting.',
+           technologyBody:'Pila tecnológica fiable, redundante y sensible a la latencia. Invertimos intensamente en tecnología propietaria para garantizar la resiliencia operativa en regímenes volátiles.',
+           executionBody:'Entradas y salidas precisas, minimizando la fricción, el slippage y el error conductual. La calidad de ejecución se trata como un componente central del alfa.' },
   home:{
     kicker:'TRADING PROPIETARIO · ACTIVOS DIGITALES',
     title:'FIRMA DE TRADING PROPIETARIO',
@@ -112,7 +121,10 @@ es: {
 
 de: {
   nav:{ home:'START', firm:'DIE FIRMA', thesis:'THESE', contact:'KONTAKT' },
-  triad:{ research:'RESEARCH', technology:'TECHNOLOGIE', execution:'AUSFÜHRUNG' },
+  triad:{ research:'RESEARCH', technology:'TECHNOLOGIE', execution:'AUSFÜHRUNG',
+           researchBody:'Systematische Marktintelligenz, strukturelle Analyse und datengetriebene Signalgenerierung. Wir raten nicht; wir messen, modellieren und backtesten.',
+           technologyBody:'Zuverlässiger, redundanter, latenzbewusster technischer Stack. Wir investieren stark in unsere proprietäre Technologie, um operative Resilienz auch in volatilen Phasen sicherzustellen.',
+           executionBody:'Präziser Ein- und Ausstieg, Minimierung von Friktion, Slippage und Verhaltensfehlern. Ausführungsqualität wird als Kernkomponente des Alphas behandelt.' },
   home:{
     kicker:'PROPRIETÄRER HANDEL · DIGITALE VERMÖGENSWERTE',
     title:'EIGENHANDELSUNTERNEHMEN',
